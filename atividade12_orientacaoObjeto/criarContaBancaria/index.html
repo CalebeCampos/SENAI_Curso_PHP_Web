@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Orientacao a objeto - Crie sua conta bancaria</title>
+    </head>
+    <body>
+
+        <h1><center>CRIE SUA CONTA BANCARIA</center></h1>
+        <hr>
+        <form action="/atividade12_orientacaoObjeto/criarContaBancaria/result.php" method="post">
+
+            <h2>DADOS PESSOAIS</h2>
+
+            <label for="dadosUsuarioNome">Nome: </label>
+            <input type="text" name="nome">
+            
+            <label for="dadosUsuarioIdade">Idade: </label>
+            <input type="number" name="idade">
+
+            <label for="dadosUsuarioEmail">E-mail: </label>
+            <input type="email" name="email">
+            <br><br>
+
+            <label for="dadosUsuarioTelefone">Telefone (Celular): </label>
+            <input type="text" name="telefoneCelular">
+
+            <label for="dadosUsuarioTelefone">Telefone (fixo): </label>
+            <input type="text" name="telefoneFixo">
+
+            <label for="dadosUsuarioCPF">CPF: </label>
+            <input type="text" name="cpf">
+            <br><br>
+
+            <label for="dadosUsuarioProfissao">Profissão: </label>
+            <input type="text" name="profissao">
+            
+            <label for="dadosUsuarioRendaMensal">Renda Mensal: </label>
+            <input type="text" name="rendaMensal">           
+
+            <label for="dadosUsuarioCEP">CEP: </label>
+            <input type="text" name="cep">
+            <br><br>
+
+            <label for="dadosUsuarioUF">UF: </label>
+            <input type="text" name="uf">
+
+            <label for="dadosUsuarioCidade">Cidade: </label>
+            <input type="text" name="cidade">
+
+            <label for="dadosUsuarioBairro">Bairro: </label>
+            <input type="text" name="bairro">
+            <br><br>
+
+            <label for="dadosUsuarioLogradouro">Logradouro: </label>
+            <input type="text" name="logradouro">
+
+            <label for="dadosUsuarioComplemento">Complemento: </label>
+            <input type="text" name="complemento">
+
+            <label for="dadosUsuarioNumero">Numero: </label>
+            <input type="text" name="numero">
+            <br><br><hr>
+
+            <h2>DADOS DA CONTA</h2>
+
+            <label for="dadosUsuarioBanco">Banco: </label>
+            <select name="banco">
+                <option value="0001" >0001 - CEF - Caixa Economica Federal</option>
+                <option value="0002" >0002 - BB - Banco do Brasil</option>
+                <option value="0003" >0003 - BRB - Banco de Brasilia</option>
+                <option value="0004" >0004 - ITAU</option>
+                <option value="0005" >0005 - Banco Santander</option>
+                <option value="0006" >0006 - BTG Pactual</option>
+                <option value="0007" >0007 - Bradesco</option>
+                <option value="0008" >0008 - Nubank</option>
+                <option value="0009" >0009 - Banco Inter</option>
+                <option value="0010" >0010 - Banco Original</option>
+            </select>
+            <br><br>
+
+            <label for="dadosUsuarioAgencia">Agencia: </label>
+            <select name="agencia">
+                <option value="1100" >1100</option>
+                <option value="1101" >1101</option>
+                <option value="1102" >1102</option>
+                <option value="1103" >1103</option>
+                <option value="1104" >1104</option>
+                <option value="1105" >1105</option>
+                <option value="1106" >1106</option>
+                <option value="1107" >1107</option>
+                <option value="1108" >1108</option>
+                <option value="1109" >1109</option>
+            </select>
+            <br><br>
+
+            <label for="dadosUsuarioTipoConta">Tipo: </label>
+            <select name="tipoConta">
+                <option value="Conta Corrente" >Conta Corrente</option>
+                <option value="Conta Poupanca" >Conta Poupança</option>
+                <option value="Conta Salario"  >Conta Salário</option>
+            </select>
+            <br><br>
+
+            <label for="dadosUsuariolimiteChequeEspecial">Limite Cheque Especial: </label>
+            <input type="text" name="limiteChequeEspecial">
+
+            <br><br><hr>
+            <center><button type="submit">ENVIAR</button></center>
+            
+        </form>
+
+    </body>
+</html>
+
