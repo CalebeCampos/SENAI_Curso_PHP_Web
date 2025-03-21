@@ -10,7 +10,7 @@
         public $telefoneFixo;
         public $cpf;
         public $profissao;
-        public $rendaMensal;
+        private $rendaMensal;
         public $cep;
         public $uf;
         public $cidade;
@@ -19,8 +19,8 @@
         public $complemento;
         public $numero;
         
-        /*
-        function __construct($nome, $idade, $email, $telefoneCelular, $telefoneFixo, $cpf, $profissao, $rendaMensal, $cep, $uf, $cidade, $bairro, $logradouro, $complemento, $numero) {
+        public function __construct($nome, $idade, $email, $telefoneCelular, $telefoneFixo, $cpf, $profissao, 
+                             $rendaMensal, $cep, $uf, $cidade, $bairro, $logradouro, $complemento, $numero) {
             $this->nome = $nome;
             $this->idade = $idade;
             $this->email = $email;
@@ -37,11 +37,14 @@
             $this->complemento = $complemento;
             $this->numero = $numero;
         }
-        */
 
         //criando os metodos da classe
 
-        function exibirDados() {
+        public function getRendaMensal() {
+            return $this->rendaMensal;
+        }
+
+        public function exibirDados() {
             echo "<b>Nome: </b>" . $this->nome . "</br>";
             echo "<b>Idade: </b>" . $this->idade . "</br>";
             echo "<b>Email: </b>" . $this->email . "</br>";

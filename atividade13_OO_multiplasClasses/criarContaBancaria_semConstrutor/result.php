@@ -26,10 +26,13 @@
     $pessoa->numero = $_POST["numero"];
 
     //preenche os valores dos atributos do objeto ContaBancaria
+    $contaBancaria->tipoConta = $_POST["tipoConta"];
     $contaBancaria->banco = $_POST["banco"];
     $contaBancaria->agencia = $_POST["agencia"];
-    $contaBancaria->tipoConta = $_POST["tipoConta"];
-    $contaBancaria->limiteChequeEspecial = $_POST["limiteChequeEspecial"];
+    $contaBancaria->numeroConta = $contaBancaria->gerarNumeroConta();
+    $contaBancaria->rendaMensalTitular = $pessoa->getRendaMensal();
+    $contaBancaria->saldo = $contaBancaria->gerarSaldoInicial();
+    $contaBancaria->chequeEspecial = $contaBancaria->gerarChequeEspecialInicial();
 
     //exibe os dados da pessoa
     echo "<h2>DADOS PESSOAIS</h2>";
@@ -38,6 +41,7 @@
 
     //exibe os dados da conta bancaria
     echo "<h2>DADOS DA CONTA BANCÁRIA</h2>";
+    echo "<h3>Sua conta foi criada com sucesso!</h3>";
     $contaBancaria->exibirDados();
     echo "<hr><br>";
 
