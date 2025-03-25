@@ -1,0 +1,45 @@
+<?php
+
+    // a classe pessoa nao pode ser instanciada por ser uma classe abstrata
+    /*
+    include "Pessoa.class.php";
+
+    $pessoa = new Pessoa();
+
+    $pessoa->nome = "Calebe Campos";
+    $pessoa->idade = 35;
+
+    echo "Nome: " . $pessoa->nome . "<br>";
+    echo "Idade: " . $pessoa->idade . "<br>";
+    */
+
+    //com a heranca é possivel instanciar a classe filha e herdar os atributos e metodos da classe pai
+    include "Pessoa.class.php";
+    include "PessoaFisica.class.php";
+
+    $usuario = new PessoaFisica();
+
+    //metodos da classe pai "Pessoa"
+    $usuario->setEmail("calebe.campos@gmail.com");
+    $usuario->setTelefone("61996552200");
+    $usuario->setEndereco("Quadra 50, Lote 101, Casa 2");
+
+    //metodos da classe "PessoaFisica"
+    $usuario->setNome("Calebe Campos");
+    $usuario->setCPF("02675295116");
+    $usuario->setDataNascimento("02/04/1990");
+    $usuario->setProfissao("DBA");
+    $usuario->setGenero("Masculino");
+
+    echo "<h3>Atributos da classe PESSOA</h3>";
+    echo "<b>Email: </b>" . $usuario->getEmail() . "<br>";
+    echo "<b>Telefone: </b>" . $usuario->getTelefone() . "<br>";
+    echo "<b>Endereco: </b>" . $usuario->getEndereco() . "<br>";
+    echo "<h3>Atributos da classe PESSOAFISICA</h3>";
+    echo "<b>Nome: </b>" . $usuario->getNome() . "<br>";
+    echo "<b>CPF: </b>" . $usuario->getCPF() . "<br>";
+    echo "<b>Data de Nascimento: </b>" . $usuario->getDataNascimento() . "<br>";
+    echo "<b>Profissao: </b>" . $usuario->getProfissao() . "<br>";
+    echo "<b>Genero: </b>" . $usuario->getGenero() . "<br>";
+
+?>
